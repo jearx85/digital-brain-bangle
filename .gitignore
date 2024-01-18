@@ -1,0 +1,21 @@
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+!.yarn/patches
+build
+coverage
+dist
+.DS_Store
+node_modules
+# Local Netlify folder
+.netlify
+
+coverage-summary.json
+tsconfig.tsbuildinfo
+
+# playwright
+playwright-report
+playwright/.cache/

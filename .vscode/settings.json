@@ -1,0 +1,61 @@
+{
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "cSpell.words": [
+    "abortable",
+    "backlink",
+    "capp",
+    "Comlink",
+    "comms",
+    "dhancha",
+    "editorbar",
+    "naukar",
+    "smallscreen",
+    "titlebar",
+    "Unmount",
+    "vite",
+    "worktree",
+    "Worktrees"
+  ],
+  "javascript.preferences.importModuleSpecifier": "project-relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#913060",
+    "activityBar.activeBorder": "#101808",
+    "activityBar.background": "#913060",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#101808",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "sash.hoverBorder": "#913060",
+    "statusBar.background": "#6b2347",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#913060",
+    "statusBarItem.remoteBackground": "#6b2347",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#6b2347",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#6b234799",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799"
+  },
+  "peacock.color": "#6b2347",
+  "editor.formatOnSave": true,
+  "CSSNavigation.excludeGlobPatterns": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/coverage/**",
+    "**/.yarn/**"
+  ],
+  "CSSNavigation.ignoreSameNameCSSFile": false,
+  "CSSNavigation.enableLogLevelMessage": true
+}
