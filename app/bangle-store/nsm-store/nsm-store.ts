@@ -87,9 +87,9 @@ export const createNsmStore = (
         updateState(newState);
       },
       debug: (log) => {
-        console.group(`[main] ${log.type} >`);
-        console.info(log);
-        console.groupEnd();
+        // console.group(`[main] ${log.type} >`);
+        // console.info(log);
+        // console.groupEnd();
       },
       stateOverride: initStateOverride,
     },

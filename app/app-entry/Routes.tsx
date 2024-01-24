@@ -5,6 +5,7 @@ import { lastWorkspaceUsed } from '@bangle.io/bangle-store';
 import { BANGLE_HOME_PATH } from '@bangle.io/constants';
 import { assertNotUndefined } from '@bangle.io/utils';
 
+import Home from '../components/Home/Home';
 import { LandingPage } from './pages/LandingPage';
 import { WorkspaceInvalidPath } from './pages/WorkspaceInvalidPath';
 import { WorkspaceNativefsAuthBlockade } from './pages/WorkspaceNeedsAuth';
@@ -14,9 +15,14 @@ import { WorkspacePage } from './pages/WorkspacePage';
 export function Routes() {
   return (
     <Switch>
+      <Route path="/home">
+        <Home />
+      </Route>
+
       <Route path="/ws/:wsName">
         <WorkspacePage />
       </Route>
+
       <Route path="/ws-auth/:wsName">
         {(params) => {
           assertNotUndefined(params.wsName, 'wsName cannot be undefined');
@@ -24,16 +30,19 @@ export function Routes() {
           return <WorkspaceNativefsAuthBlockade wsName={params.wsName} />;
         }}
       </Route>
+
       <Route path="/ws-not-found/:wsName">
         {(params) => <WorkspaceNotFound wsName={params.wsName} />}
       </Route>
+
       <Route path="/ws-invalid-path/:wsName">
         <WorkspaceInvalidPath />
       </Route>
 
-      <Route path="/landing">
+      {/* <Route path="/landing">
         <LandingPage />
-      </Route>
+      </Route> */}
+
       <Route path="/">
         {() => {
           const lastWsName = lastWorkspaceUsed.get();
@@ -42,7 +51,7 @@ export function Routes() {
             return <Redirect to={BANGLE_HOME_PATH} />;
           }
 
-          return <Redirect to={'/landing'} />;
+          return <Redirect to={'/home'} />;
         }}
       </Route>
     </Switch>

@@ -1,0 +1,8 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.offcanvas-arrow {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-color: var(--BV-colorNeutralBorderSubdued);
+  padding: 1px;
+}

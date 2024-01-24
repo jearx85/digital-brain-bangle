@@ -1,0 +1,8 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.micard {
+  margin-top: 25px;
+}
+/* stylelint-disable-next-line selector-class-pattern */
+.container {
+  overflow-y: auto;
+}

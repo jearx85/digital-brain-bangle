@@ -19,8 +19,8 @@ export function createNaukarStore(eternalVars: EternalVars): NaukarStore {
           return;
         }
 
-        console.group(`[naukar] ${log.type} update`);
-        console.log(log);
+        // console.group(`[naukar] ${log.type} update`);
+        // console.log(log);
         console.groupEnd();
       },
     },

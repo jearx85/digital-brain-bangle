@@ -1,0 +1,5 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.myActivity {
+  display: inline-block;
+  height: 100%;
+}

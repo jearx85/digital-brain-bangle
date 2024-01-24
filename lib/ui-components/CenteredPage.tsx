@@ -30,12 +30,13 @@ export function CenteredBoxedPage({
 }) {
   return (
     <div
-      data-testid={dataTestId}
-      className={cx(
-        'w-full h-full smallscreen:h-screen flex flex-col px-8 mt-6',
-        'lg:p-0 lg:m-0 justify-center smallscreen:justify-start items-center',
-        className,
-      )}
+      className="container mt-20"
+      // data-testid={dataTestId}
+      // className={cx(
+      //   'w-full h-full smallscreen:h-screen flex flex-col px-8 mt-6',
+      //   'lg:p-0 lg:m-0 justify-center smallscreen:justify-start items-center',
+      //   className,
+      // )}
     >
       <div
         className="w-full rounded-lg border-neutral bg-colorNeutralBgLayerTop"

@@ -77,7 +77,7 @@ export function useSearchAllTags(query: string, isVisible: boolean): string[] {
 
       listAllTags(noteWsPaths, getNoteForTags, controller.signal)
         .then((tags) => {
-          console.log('allTags', tags);
+          // console.log('allTags', tags);
 
           setAllTags(tags);
         })

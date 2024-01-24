@@ -1,13 +1,27 @@
+import './Activitybar.css';
+
 import React from 'react';
+// @ts-expect-error
+// eslint-disable-next-line import/no-unresolved
+import { IoNotificationsOutline } from 'react-icons/io5';
 
 import { useNsmSlice, useNsmSliceState } from '@bangle.io/bangle-store-context';
 import { CHANGELOG_MODAL_NAME } from '@bangle.io/constants';
 import { vars } from '@bangle.io/css-vars';
 import { useExtensionRegistryContext } from '@bangle.io/extension-registry';
 import { nsmSliceWorkspace } from '@bangle.io/nsm-slice-workspace';
-import { goToWorkspaceHome, nsmPageSlice } from '@bangle.io/slice-page';
+import {
+  goToHomePage,
+  goToWorkspaceHome,
+  nsmPageSlice,
+} from '@bangle.io/slice-page';
 import { nsmUI, nsmUISlice } from '@bangle.io/slice-ui';
-import { Button, GiftIcon, SingleCharIcon } from '@bangle.io/ui-components';
+import {
+  Button,
+  GiftIcon,
+  HomeIcon,
+  SingleCharIcon,
+} from '@bangle.io/ui-components';
 import { cx } from '@bangle.io/utils';
 
 import { ActivitybarOptionsDropdown } from './ActivitybarOptionsDropdown';
@@ -65,6 +79,22 @@ export function Activitybar() {
       className="flex flex-col flex-grow gap-2 pt-2 pb-3 border-r-1 border-colorNeutralBorder"
     >
       <Button
+        ariaLabel="MyHome"
+        style={ButtonStyleOBj.normal}
+        onPressStyle={ButtonStyleOBj.press}
+        onHoverStyle={ButtonStyleOBj.hover}
+        onPress={() => {
+          if (wsName) {
+            uiDispatch(nsmUI.closeSidebar());
+            pageDispatch(goToHomePage());
+          }
+        }}
+        variant="transparent"
+        tone="secondary"
+        size="lg"
+        leftIcon={<HomeIcon />}
+      />
+      <Button
         ariaLabel="Workspace Home"
         style={ButtonStyleOBj.normal}
         onPressStyle={ButtonStyleOBj.press}
@@ -104,7 +134,7 @@ export function Activitybar() {
         variant="transparent"
         tone="secondary"
         size="lg"
-        leftIcon={<GiftIcon showDot={changelogHasUpdates} />}
+        leftIcon={<IoNotificationsOutline showDot={changelogHasUpdates} />}
       />
       <ActivitybarOptionsDropdown
         operationKeybindings={operationKeybindings}

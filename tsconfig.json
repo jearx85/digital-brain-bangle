@@ -33,6 +33,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.jsx", "app/components/Conexion/Connect.js",
   ],
   "exclude": [
     ".yarn/__virtual__",

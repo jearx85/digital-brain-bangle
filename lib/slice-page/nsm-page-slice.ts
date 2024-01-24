@@ -228,6 +228,12 @@ export function goToLandingPage({ replace }: { replace?: boolean } = {}) {
     replace: replace,
   });
 }
+export function goToHomePage({ replace }: { replace?: boolean } = {}) {
+  return goToLocation({
+    location: '/home',
+    replace: replace,
+  });
+}
 
 export function goToWorkspaceHome({
   wsName,

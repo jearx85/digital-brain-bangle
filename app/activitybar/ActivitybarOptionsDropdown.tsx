@@ -238,7 +238,7 @@ export function ActivitybarOptionsDropdown({
           )}
         </MenuItem>
       </MenuSection>
-      <MenuSection aria-label="links section">
+      {/* <MenuSection aria-label="links section">
         <MenuItem
           key={WhatsNewKey}
           textValue="whats new"
@@ -270,8 +270,8 @@ export function ActivitybarOptionsDropdown({
         >
           <span>Discord</span>
           <DiscordIcon className="w-5 h-5" />
-        </MenuItem>
-      </MenuSection>
+        </MenuItem> 
+      </MenuSection>*/}
     </DropdownMenu>
   );
 }
